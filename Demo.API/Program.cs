@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Demo.API.Services;
+using System;
+using Topshelf;
+using Topshelf.Autofac;
 
 namespace Demo.API
 {
@@ -6,7 +9,17 @@ namespace Demo.API
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+
+            HostFactory.Run(x =>
+                {
+                    x.UseAutofacContainer(CoontainerHolder.Container);
+
+                    x.Service<ServiceManager>(s =>
+                    {
+
+                    });
+                });
         }
     }
 }

@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Topshelf" Version="4.2.0" />
+    <PackageReference Include="Topshelf.Autofac" Version="4.0.1" />
+  </ItemGroup>
+
 </Project>
